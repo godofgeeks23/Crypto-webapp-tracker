@@ -92,12 +92,12 @@ export default function CoinsTable() {
         >
           Cryptocurrency Prices by Market Cap
         </Typography>
-        {/* <TextField
+        <TextField
           label="Search For a Crypto Currency.."
           variant="outlined"
           style={{ marginBottom: 20, width: "100%" }}
           onChange={(e) => setSearch(e.target.value)}
-        /> */}
+        />
         <TableContainer component={Paper}>
           {loading ? (
             <LinearProgress style={{ backgroundColor: "gold" }} />
@@ -192,7 +192,7 @@ export default function CoinsTable() {
         </TableContainer>
 
         {/* Comes from @material-ui/lab */}
-        {/* <Pagination
+        <Pagination
           count={(handleSearch()?.length / 10).toFixed(0)}
           style={{
             padding: 20,
@@ -205,7 +205,7 @@ export default function CoinsTable() {
             setPage(value);
             window.scroll(0, 450);
           }}
-        /> */}
+        />
       </Container>
     </ThemeProvider>
   );
