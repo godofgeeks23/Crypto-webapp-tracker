@@ -46,9 +46,11 @@ const Metamask = () => {
             <>
                 <h1>Metamask</h1>
                 <button onClick={connectWallet}>Connect Wallet</button>
-                <p>{defaultAccount}</p>
-                <p>{userBalance}</p>
-                <p>{errMessage}</p>
+                <p>Wallet Address - {defaultAccount}</p>
+                <p>User Balance - {userBalance}</p>
+                {/* display errMessage if it is not empty */}
+                {errMessage && <p>Error Message - {errMessage}</p>}
+
             </>
         );
     }
