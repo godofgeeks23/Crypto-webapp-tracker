@@ -44,6 +44,7 @@ function Header() {
       <AppBar color="transparent" position="static">
         <Container>
           <Toolbar>
+            {/* typography is for text */}
             <Typography
               onClick={() => history.push(`/`)}
               variant="h6"
