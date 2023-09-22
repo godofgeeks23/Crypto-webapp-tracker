@@ -192,8 +192,9 @@ export default function CoinsTable() {
         </TableContainer>
 
         {/* Comes from @material-ui/lab */}
+        {/* pagination component made */}
         <Pagination
-          count={(handleSearch()?.length / 10).toFixed(0)}
+          count={(handleSearch()?.length / 10)}
           style={{
             padding: 20,
             width: "100%",
@@ -201,9 +202,12 @@ export default function CoinsTable() {
             justifyContent: "center",
           }}
           classes={{ ul: classes.pagination }}
+          // without class pagination component cant be made
+          //onchange-set values,suppose we click 3,then 3rd page will get displayed
           onChange={(_, value) => {
             setPage(value);
             window.scroll(0, 450);
+            //window.scroll -when we click on any page num then page is shifted slightly upward
           }}
         />
       </Container>
