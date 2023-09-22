@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-const ethers = require("ethers")
 // import { ethers } from "ethers";
+import {
+    Container
+} from "@material-ui/core";
+const ethers = require("ethers")
 
 const Metamask = () => {
     const [errMessage, setErrMessage] = React.useState("");
@@ -39,20 +42,23 @@ const Metamask = () => {
             setUserBalance(ethers.formatEther(balance));
         });
     }
-    
 
 
-        return (
-            <>
-                <h1>Metamask</h1>
-                <button onClick={connectWallet}>Connect Wallet</button>
+
+    return (
+        <>
+            <Container style={{ textAlign: "center", marginTop: 20, marginBottom: 20 }}>
+                <h1>Wallet Integration</h1>
+                <button onClick={connectWallet} style={{ margin: 18, fontFamily: "Montserrat", padding: 20 }}>Connect Wallet</button>
                 <p>Wallet Address - {defaultAccount}</p>
                 <p>User Balance - {userBalance}</p>
                 {/* display errMessage if it is not empty */}
                 {errMessage && <p>Error Message - {errMessage}</p>}
 
-            </>
-        );
-    }
+            </Container>
 
-    export default Metamask;
+        </>
+    );
+}
+
+export default Metamask;

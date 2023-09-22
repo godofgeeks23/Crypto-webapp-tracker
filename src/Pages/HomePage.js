@@ -7,8 +7,8 @@ const Homepage = () => {
   return (
     <>
       <Banner />
-      <CoinsTable />
       <Metamask />
+      <CoinsTable />
     </>
   );
 };
