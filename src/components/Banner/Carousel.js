@@ -10,11 +10,10 @@ import { numberWithCommas } from "../CoinsTable";
 const Carousel = () => {
   const [trending, setTrending] = useState([]);
   const { currency, symbol } = CryptoState();
-//async wait for data from api
+
   const fetchTrendingCoins = async () => {
     const { data } = await axios.get(TrendingCoins(currency));
 
-    console.log(data);
     setTrending(data);
   };
 
